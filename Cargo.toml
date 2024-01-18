@@ -1,0 +1,12 @@
+[package]
+name = "meflib"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ryan Ruckley <rruckley@gmail.com>"]
+description = "Rust Library covering MEF schema"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "1.0.195"
+serde_json = "1.0.111"
