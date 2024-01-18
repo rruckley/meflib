@@ -5,6 +5,8 @@
 
 const LIB_PATH : &str = "mef-api";
 
+// Product Quote
+pub mod w115;
 // Geographic Site
 pub mod w122;
 // Product Ordering
