@@ -10,3 +10,4 @@ description = "Rust Library covering MEF schema"
 [dependencies]
 serde = "1.0.195"
 serde_json = "1.0.111"
+tmflib = { git = "https://github.com/rruckley/tmflib.git"}
