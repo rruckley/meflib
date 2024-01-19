@@ -3,7 +3,7 @@
 
 #[warn(missing_docs)]
 
-const LIB_PATH : &str = "mef-api";
+const LIB_PATH : &str = "mefApi";
 
 // Product Quote
 pub mod w115;
