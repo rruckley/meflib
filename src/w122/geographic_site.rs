@@ -9,11 +9,11 @@ pub enum MEFSiteType {
 
 #[derive(Clone,Default,Debug)]
 pub struct GeographicSite {
-    id : String,
-    href: String,
-    name: String,
-    description: String,
-    company_name: String,
-    customer_name: String,
-    site_type: MEFSiteType,
+    pub id : String,
+    pub href: String,
+    pub name: String,
+    pub description: String,
+    pub company_name: String,
+    pub customer_name: String,
+    pub site_type: MEFSiteType,
 }
