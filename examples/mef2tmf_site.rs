@@ -11,7 +11,7 @@ fn main() {
         ..Default::default()
     };
 
-    let tmf : TMFSite = TMFSite::from(mef);
+    let tmf = TMFSite::from(mef);
 
     dbg!(tmf);
 }
