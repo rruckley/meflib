@@ -5,6 +5,7 @@
 use tmflib::{tmf674::geographic_site_v4::GeographicSite as TMFSite, HasId};
 // use tmflib::tmf629::customer::Customer;
 use tmflib::tmf632::organization::Organization;
+use tmflib::tmf629::customer::Customer;
 use tmflib::common::related_party::RelatedParty;
 use crate::w122::geographic_site::GeographicSite as MEFSite;
 use std::convert::From;
@@ -23,9 +24,11 @@ impl From<MEFSite> for TMFSite {
         // Copying the id across might violate uniqueness constraints
         site.id = Some(value.id.clone());
         site.generate_href();
-        let org = Organization::from(value.customer_name);
+        let org = Organization::from(value.company_name);
         let party = RelatedParty::from(org);
-        site.related_party = Some(vec![party]);
+        let cust = Organization::from(value.customer_name);
+        let cust = Customer::from(&cust);
+        site.related_party = Some(vec![party,RelatedParty::from(&cust)]);
         site
     }
     
