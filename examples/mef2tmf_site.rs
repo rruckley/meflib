@@ -8,6 +8,7 @@ fn main() {
         name: "MyMEFSite".into(),
         description : "This is a MEF site to be converted to TMF".into(),
         customer_name : "Orange Computers".into(),
+        company_name: "The Property Group Pty Ltd".into(),
         ..Default::default()
     };
 
