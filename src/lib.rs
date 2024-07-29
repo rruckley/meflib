@@ -11,6 +11,3 @@ pub mod w115;
 pub mod w122;
 // Product Ordering
 pub mod w123;
-// Conversion functions
-pub mod convert;
-
