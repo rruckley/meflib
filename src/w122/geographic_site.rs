@@ -8,6 +8,23 @@ pub enum MEFSiteType {
 }
 
 #[derive(Clone,Default,Debug)]
+pub struct RelatedContactInformation {
+    email_address: String,
+    name : String,
+    number : String,
+    number_extension : String,
+    organization : String,
+    role: String,
+}
+
+#[derive(Clone,Default,Debug)]
+pub struct FieldedAddress {
+    city : String,
+    country : String,
+    locality: String,
+}
+
+#[derive(Clone,Default,Debug)]
 pub struct GeographicSite {
     pub id : String,
     pub href: String,
@@ -16,4 +33,5 @@ pub struct GeographicSite {
     pub company_name: String,
     pub customer_name: String,
     pub site_type: MEFSiteType,
+    pub postal_address: Vec<FieldedAddress>,
 }
