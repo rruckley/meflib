@@ -1,13 +1,16 @@
 //! Geographite Site Module
 
-#[derive(Clone,Default,Debug)]
+
+use serde::{Deserialize,Serialize};
+
+#[derive(Clone,Default,Debug, Deserialize, Serialize)]
 pub enum MEFSiteType {
     #[default]
     Public,
     Private,
 }
 
-#[derive(Clone,Default,Debug)]
+#[derive(Clone,Default,Debug,Deserialize,Serialize)]
 pub struct RelatedContactInformation {
     email_address: String,
     name : String,
@@ -17,14 +20,14 @@ pub struct RelatedContactInformation {
     role: String,
 }
 
-#[derive(Clone,Default,Debug)]
+#[derive(Clone,Default,Debug,Deserialize,Serialize)]
 pub struct FieldedAddress {
     city : String,
     country : String,
     locality: String,
 }
 
-#[derive(Clone,Default,Debug)]
+#[derive(Clone,Default,Debug,Deserialize,Serialize)]
 pub struct GeographicSite {
     pub id : String,
     pub href: String,
