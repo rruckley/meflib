@@ -12,12 +12,12 @@ pub enum MEFSiteType {
 
 #[derive(Clone,Default,Debug,Deserialize,Serialize)]
 pub struct RelatedContactInformation {
-    email_address: String,
-    name : String,
-    number : String,
-    number_extension : String,
-    organization : String,
-    role: String,
+    pub email_address: String,
+    pub name : String,
+    pub number : String,
+    pub number_extension : String,
+    pub organization : String,
+    pub role: String,
 }
 
 #[derive(Clone,Default,Debug,Deserialize,Serialize)]
@@ -35,6 +35,7 @@ pub struct GeographicSite {
     pub description: String,
     pub company_name: String,
     pub customer_name: String,
+    pub related_contact_information: Vec<RelatedContactInformation>,
     pub site_type: MEFSiteType,
     pub postal_address: Vec<FieldedAddress>,
 }
